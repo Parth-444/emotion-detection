@@ -10,7 +10,6 @@ def load_model(path):
     clf = pickle.load(open(path,'rb'))
 
     return clf
-# clf = pickle.load(open('models/model.pkl','rb'))
 
 # import test data
 def import_test_data(test_data_path):
@@ -19,7 +18,6 @@ def import_test_data(test_data_path):
 
     return test_data
 
-# test_data = pd.read_csv('./data/features/test_bow.csv')
 
 def process_data(model, test_data):
 
@@ -33,11 +31,6 @@ def process_data(model, test_data):
 
     return y_test, y_pred, y_pred_proba
 
-# X_test = test_data.iloc[:,0:-1].values
-# y_test = test_data.iloc[:,-1].values
-
-# y_pred = clf.predict(X_test)
-# y_pred_proba = clf.predict_proba(X_test)[:, 1]
 
 # Calculate evaluation metrics
 def calculate_scores(y_test, y_pred, y_pred_proba):
@@ -59,17 +52,7 @@ def calculate_scores(y_test, y_pred, y_pred_proba):
 
     return metrics_dict
 
-# accuracy = accuracy_score(y_test, y_pred)
-# precision = precision_score(y_test, y_pred)
-# recall = recall_score(y_test, y_pred)
-# auc = roc_auc_score(y_test, y_pred_proba)
 
-# metrics_dict={
-#     'accuracy':accuracy,
-#     'precision':precision,
-#     'recall':recall,
-#     'auc':auc
-# }
 
 def save_metrics(path, metrics_dict):
 
@@ -77,8 +60,6 @@ def save_metrics(path, metrics_dict):
     
         json.dump(metrics_dict, file, indent=4)
 
-# with open('reports/metrics.json', 'w') as file:
-#     json.dump(metrics_dict, file, indent=4)
 
 def main():
 
