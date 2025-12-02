@@ -29,7 +29,7 @@ logger.addHandler(file_handler)
 
 def load_params(params_path: str) -> float:
 
-    test_size = yaml.safe_load(open(params_path, 'r'))['make_dataset']['test_size']
+    test_size = yaml.safe_load(open(params_path, 'r'))['data_ingestion']['test_size']
     logger.debug('Test size: %s', test_size)
     return test_size
 
