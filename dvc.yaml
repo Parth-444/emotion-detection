@@ -21,10 +21,10 @@ stages:
     - data/features
 
   model_training:
-    cmd: python src/model/train_model.py
+    cmd: python src/model/model_training.py
     deps:
     - data/features
-    - src/model/train_model.py
+    - src/model/model_training.py
     outs:
     - models/model.pkl
   model_evaluation:
