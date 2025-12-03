@@ -6,7 +6,7 @@ import yaml
 
 def load_params(params_path):
 
-    params = yaml.safe_load(open(params_path, 'r'))['model_building']
+    params = yaml.safe_load(open(params_path, 'r'))['model_training']
 
     return params
 
